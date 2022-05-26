@@ -100,7 +100,7 @@ trait Os
         } elseif (preg_match('/Mac OS X/u', $ua) || preg_match('/;os=Mac/u', $ua)) {
             /* OS X */
             
-            $this->data->os->name = 'OS X';
+            $this->data->os->name = 'macOS';
 
             if (preg_match('/Mac OS X (1[0-9][0-9\._]*)/u', $ua, $match)) {
                 $this->data->os->version = new Version([ 'value' => str_replace('_', '.', $match[1]), 'details' => 2 ]);
